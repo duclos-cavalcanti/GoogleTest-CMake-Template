@@ -179,12 +179,19 @@ to the `total` folder and use your favorite browser to point to/open the `index.
 4. **Obtaining Coverage Reports**
 ```sh
 cd GoogleTestTemplate-CMake
-cd tests/build
+cd test/build # if not already there
 make coverage
 ```
 The Coverage reports will be located at `tests/reports/coverage/*`. There will be a 
 `src`, `lib`, `total` and `test` folders. Don't worry, unless you want something more specific, just go 
 to the `total` folder and use your favorite browser to point to/open the `index.html` file within it.
+
+5. **Obtaining Documentation**
+```sh
+cd build 
+make docs
+```
+Works for both individual projects.
 
 <a name="filestructure"/>
 
