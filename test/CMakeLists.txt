@@ -48,6 +48,7 @@ set(PROJECT_INCLUDES
     ${PARENT_DIR}/lib/include
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/mocks
+    ${PROJECT_SOURCE_DIR}/mocks/include
 )
 
 set(PROJECT_SOURCES
