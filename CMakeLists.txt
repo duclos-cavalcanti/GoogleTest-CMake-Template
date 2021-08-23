@@ -41,3 +41,4 @@ include_directories(${PROJECT_INCLUDES})
 add_executable(${PROJECT_NAME} 
                ${PROJECT_SOURCES})
 include(docs)
+include(clean)
