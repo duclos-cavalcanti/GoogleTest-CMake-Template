@@ -110,7 +110,7 @@ https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 2. Then:
-```
+```sh
 brew install cmake gcc gcovr lcov
 ```
 Python is assumed to already be installed.
@@ -154,20 +154,27 @@ make
 
 3. **Building the Tests Project**
 ```sh
-cd GoogleTestTemplate-CMake
-cd tests/build
+cd test/build
 cmake ..
 make
 ```
 
 4. **Running Tests and Obtaining Tests Report**
 ```sh
-cd GoogleTestTemplate-CMake
-cd tests/build
+cd test/build # if not already there
 make report
 ```
 The Unit-Testing reports will be located at `tests/reports/test`. From there
 one can use his/her favorite browser to point/open the `index.html` file.
+
+4. **Obtaining Coverage Reports**
+```sh
+cd test/build # if not already there
+make coverage
+```
+The Coverage reports will be located at `tests/reports/coverage/*`. There will be a 
+`src`, `lib`, `total` and `test` folders. Don't worry, unless you want something more specific, just go 
+to the `total` folder and use your favorite browser to point to/open the `index.html` file within it.
 
 4. **Obtaining Coverage Reports**
 ```sh
@@ -186,33 +193,24 @@ The project's folder structure is the following:
 ```
 .
 ├── bin
-│   └── gtest-template-test
 ├── build
-│   ├── bin
-│   ├── CMakeCache.txt
-│   ├── CMakeFiles
-│   ├── cmake_install.cmake
-│   ├── compile_commands.json
-│   ├── googletest-build
-│   ├── googletest-download
-│   ├── googletest-src
-│   ├── lib
-│   └── Makefile
 ├── cmake
-│   ├── coverage.cmake
-│   ├── gtest-build.cmake
-│   ├── gtest-download.cmake
-│   └── test.cmake
-├── CMakeLists.txt
+├── docs
 ├── include
-├── mocks
-├── reports
-│   ├── coverage
-│   ├── html
-│   └── test
+├── lib
+│   └── include
 ├── src
-│   ├── hello-test.cc
-│   └── main.cc
-└── test.py
+└── test
+    ├── bin
+    ├── build
+    ├── cmake
+    ├── docs
+    ├── include
+    ├── mocks
+    ├── reports
+    │   ├── coverage
+    │   ├── html
+    │   └── test
+    └── src
 
 ```
