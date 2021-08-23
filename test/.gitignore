@@ -1,0 +1,16 @@
+bin/*
+
+build/*
+
+.cache
+.cache/
+.cache/*
+
+docs/docs/*
+docs/doxygen_warning*
+
+reports/coverage/**
+reports/test/*
+
+*__pycache__*
+*__pycache__/*
