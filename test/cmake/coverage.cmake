@@ -7,7 +7,7 @@ set (COVERAGE_DIRECTORIES
 
 set (COVERAGE_TEST_DIRECTORIES
     src
-    mock
+    # mock
     )
 
 set (GLOBAL_COVERAGE_VARIABLES "")

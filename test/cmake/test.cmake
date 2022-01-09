@@ -1,8 +1,6 @@
 add_custom_target("report"
-    COMMAND echo "=================== Testing/Report ===================="
+    COMMENT "TESTING/REPORT"
+    DEPENDS ${PROJECT_TEST_NAME} base
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-    COMMAND python test.py
+    COMMAND python3 test.py
 )
-
-add_dependencies(report 
-                ${PROJECT_TEST_NAME})
