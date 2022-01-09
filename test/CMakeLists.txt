@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 
-# if (CMAKE_BUILD_TYPE STREQUAL "Coverage")  # Example of a Build Type
-#     message("COVERAGE ACTIVATED")
-# else()
-
 set(PROJECT_TEST_NAME 
     gtest-template-test)
 
@@ -70,11 +66,6 @@ target_link_libraries(${PROJECT_TEST_NAME}
                       gmock_main
                       # gmock
                       )
-
-# enable_testing()
-# add_test(NAME ${PROJECT_TEST_NAME}
-#          COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_TEST_NAME}
-#          )
 
 include(test)
 include(coverage)
